@@ -17,7 +17,7 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHand
             _context = context;
         }
 
-        public async void Handle(RemoveMovieCommand removeMovieCommand)
+        public async Task Handle(RemoveMovieCommand removeMovieCommand)
         {
             var value = await _context.Movies.FindAsync(removeMovieCommand.MovieId);
             _context.Movies.Remove(value);

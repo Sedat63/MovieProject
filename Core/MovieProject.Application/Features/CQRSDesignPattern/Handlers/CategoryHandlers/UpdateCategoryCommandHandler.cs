@@ -17,10 +17,10 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.CategoryH
             _context = context;
         }
 
-        public async void Handler(UpdateCategoryCommand updateCategoryCommand)
+        public async Task Handle(UpdateCategoryCommand updateCategoryCommand)
         {
             var value = await _context.Categories.FindAsync(updateCategoryCommand.CategoryId);
-            value.CategoryId = updateCategoryCommand.CategoryId;
+            value.CategoryName = updateCategoryCommand.CategoryName;
             await _context.SaveChangesAsync();
         }
     }

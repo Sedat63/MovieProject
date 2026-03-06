@@ -17,7 +17,7 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHand
             _context = context;
         }
 
-        public async void Handler(UpdateMovieCommand updateMovieCommand)
+        public async Task Handle(UpdateMovieCommand updateMovieCommand)
         {
             var value = await _context.Movies.FindAsync(updateMovieCommand.MovieId);
             value.Rating = updateMovieCommand.Rating;

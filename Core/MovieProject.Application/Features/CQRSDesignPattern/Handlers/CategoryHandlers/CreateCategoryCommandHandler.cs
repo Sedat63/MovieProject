@@ -18,7 +18,7 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.CategoryH
             _context = context;
         }
 
-        public async void Handle(CreateCategoryCommand createCategoryCommand)
+        public async Task Handle(CreateCategoryCommand createCategoryCommand)
         {
             _context.Categories.Add(new Category
             {

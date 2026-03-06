@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<!-- movielist07:38-->
+@await Component.InvokeAsync("_UserLayoutWebUIHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_UserLayoutWebUIPreloaderComponentPartial")
+
+    <!--end of preloading-->
+
+    <!--login form popup-->
+    @await Component.InvokeAsync("_UserLayoutWebUILoginModalComponentPartial")    
+    <!--end of login form popup-->
+
+    <!--signup form popup-->
+    @await Component.InvokeAsync("_UserLayoutWebUIRegisterModalComponentPartial")
+    <!--end of signup form popup-->
+
+    <!-- BEGIN | Header -->
+    @await Component.InvokeAsync("_UserLayoutWebUINavbarComponentPartial")
+    <!-- END | Header -->
+
+    <!--Movie List -->
+
+    @await Component.InvokeAsync("_UserLayoutWebUIHeroComponentPartial")
+
+    @RenderBody()  <!--Artık buradan çalıştırmıyoruz bağlı sayfa olan MovieList sayfasından çalıştır -->
+   
+    
+    <!-- footer section-->
+
+    @await Component.InvokeAsync("_UserLayoutWebUIFooterComponentPartial")
+    
+    <!-- end of footer section-->
+
+    <script src="/Film-Review-Movie-Database/js/jquery.js"></script>
+    <script src="/Film-Review-Movie-Database/js/plugins.js"></script>
+    <script src="/Film-Review-Movie-Database/js/plugins2.js"></script>
+    <script src="/Film-Review-Movie-Database/js/custom.js"></script>
+</body>
+
+<!-- movielist07:38-->
+</html>
+
+<!-- 
+    Sedat ÖZtürk'ün parasız ve işsiz bir şekilde bir çok firmaya başvurup red aldıktan sonra hayat mücadelesini kazanıp istediği yazılım işine girip orada güzel bir maaşla başladığı işinde mutluluğu yaşayıp güzel bir kızla tanıştıktan sonra hayalinde şirketi kurması üzerine harika bir film. -->

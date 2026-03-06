@@ -8,6 +8,11 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieComm
 {
     public class RemoveMovieCommand
     {
+        public RemoveMovieCommand(int movieId)
+        {
+            MovieId = movieId;
+        }
+
         public int MovieId { get; set; }
     }
 }

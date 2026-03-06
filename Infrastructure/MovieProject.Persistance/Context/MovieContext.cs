@@ -12,7 +12,7 @@ namespace MovieProject.Persistance.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS; initial catalog=MovieProjectDb; integrated security=true; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;initial catalog=MovieProjectDb;integrated security=true;TrustServerCertificate=true");
         }
 
         public DbSet<Category> Categories { get; set; }

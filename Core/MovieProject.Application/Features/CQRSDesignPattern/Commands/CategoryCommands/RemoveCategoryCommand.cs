@@ -8,6 +8,11 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Commands.CategoryC
 {
     public class RemoveCategoryCommand
     {
+        public RemoveCategoryCommand(int categoryId)
+        {
+            CategoryId = categoryId;
+        }
+
         public int CategoryId { get; set; }
     }
 }
