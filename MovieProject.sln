@@ -12,6 +12,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{77E57FDA-503E-4CA9-96FA-136A226CF1A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{C402AEF3-B85E-4B13-882F-826EE9EBA9FA}"
+	ProjectSection(SolutionItems) = preProject
+		MovieChatgptExample.txt = MovieChatgptExample.txt
+		SeriesChatgptExample.txt = SeriesChatgptExample.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProject.Domain", "Core\MovieProject.Domain\MovieProject.Domain.csproj", "{89B9CBB6-0465-41BC-A67E-74B43942750B}"
 EndProject
@@ -24,6 +28,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProject.WebUI", "Frontends\MovieApi.WebUI\MovieProject.WebUI.csproj", "{AC9AD203-D9AD-42DE-A52E-62DB08B391E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieProject.Dto", "Frontends\MovieProject.Dto\MovieProject.Dto.csproj", "{833EF86F-C478-4810-9E03-2DDE1ABD9575}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StichAI", "StichAI", "{15848D16-0BE9-4214-AD63-6452253D69D7}"
+	ProjectSection(SolutionItems) = preProject
+		StichAIPrompt.txt = StichAIPrompt.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClaudeAI", "ClaudeAI", "{5E911710-4146-4935-B0AE-B23BACC476B4}"
+	ProjectSection(SolutionItems) = preProject
+		ClaudeAIPrompt.txt = ClaudeAIPrompt.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +80,8 @@ Global
 		{38A31D6E-DBA1-4E48-B379-240D6402EDF3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{AC9AD203-D9AD-42DE-A52E-62DB08B391E9} = {FBA692D6-E3B3-438C-824E-40B356D96B3A}
 		{833EF86F-C478-4810-9E03-2DDE1ABD9575} = {FBA692D6-E3B3-438C-824E-40B356D96B3A}
+		{15848D16-0BE9-4214-AD63-6452253D69D7} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
+		{5E911710-4146-4935-B0AE-B23BACC476B4} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30FB10F3-FAAA-4728-9606-2BD059C7F3E2}

@@ -36,34 +36,50 @@ namespace MovieApi.WebUI.Controllers
             }
 
             return View();
-
-
-
-
-            //        try
-            //        {
-            //            var responseMessage = await client.GetAsync("https://localhost:7221/api/Movies");
-
-
-            //            if (responseMessage.IsSuccessStatusCode)
-            //            {
-            //                var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            //                var values = JsonConvert.DeserializeObject<List<ResultMovieDto>>(jsonData);
-            //                return View(values ?? new List<ResultMovieDto>()); // Null gelirse boş liste
-            //            }
-            //            else
-            //            {
-            //                // API hata kodu döndürdüyse (404, 500 vb.)
-            //                Console.WriteLine($"API Hatası: {responseMessage.StatusCode}");
-            //                return View(new List<ResultMovieDto>()); // Boş liste gönder
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            // Bağlantı hatası, timeout vb.
-            //            Console.WriteLine($"Hata: {ex.Message}");
-            //            return View(new List<ResultMovieDto>()); //Boş liste gönder
-            //        }
         }
+        public IActionResult MovieDetail(int id) 
+        {
+            id = 0;
+
+            return View();
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+//        try
+//        {
+//            var responseMessage = await client.GetAsync("https://localhost:7221/api/Movies");
+
+
+//            if (responseMessage.IsSuccessStatusCode)
+//            {
+//                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+//                var values = JsonConvert.DeserializeObject<List<ResultMovieDto>>(jsonData);
+//                return View(values ?? new List<ResultMovieDto>()); // Null gelirse boş liste
+//            }
+//            else
+//            {
+//                // API hata kodu döndürdüyse (404, 500 vb.)
+//                Console.WriteLine($"API Hatası: {responseMessage.StatusCode}");
+//                return View(new List<ResultMovieDto>()); // Boş liste gönder
+//            }
+//        }
+//        catch (Exception ex)
+//        {
+//            // Bağlantı hatası, timeout vb.
+//            Console.WriteLine($"Hata: {ex.Message}");
+//            return View(new List<ResultMovieDto>()); //Boş liste gönder
+//        }
+
+

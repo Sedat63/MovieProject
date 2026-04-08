@@ -4794,8 +4794,8 @@ ul {
   display: block;
 }
 .tabs ul.tabs-mv {
-  padding: 20px 0;
-  margin-bottom: 30px;
+  padding: 12px 0;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .tabs ul.tabs-mv {
@@ -4816,9 +4816,9 @@ ul {
   }
 }
 .tabs ul.tabs-mv li a {
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 15px;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 @media (max-width: 767px) {
   .tabs ul.tabs-mv li a {
@@ -4827,7 +4827,7 @@ ul {
 }
 .tabs ul.tabs-mv li.active a,
 .tabs ul.tabs-mv li:hover a {
-  border-bottom: 3px solid #dcf836;
+    border-bottom: 3px solid #dd003f;
 }
 .tabs ul.tabs-series li {
   margin-right: 40px;
