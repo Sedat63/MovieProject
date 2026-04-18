@@ -17,5 +17,6 @@ namespace MovieProject.Persistance.Context
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Cast> Casts { get; set; }
+        public DbSet<Series> Serieses { get; set; }
     }
 }

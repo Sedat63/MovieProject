@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
 using MovieProject.Application.Features.CQRSDesignPattern.Results.MovieResults;
 using MovieProject.Persistance.Context;
 
@@ -36,3 +37,4 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHand
         }
     }
 }
+

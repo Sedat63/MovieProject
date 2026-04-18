@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
 using MovieProject.Application.Features.CQRSDesignPattern.Queries.MovieQueries;
 using MovieProject.Application.Features.CQRSDesignPattern.Results.MovieResults;
 using MovieProject.Persistance.Context;

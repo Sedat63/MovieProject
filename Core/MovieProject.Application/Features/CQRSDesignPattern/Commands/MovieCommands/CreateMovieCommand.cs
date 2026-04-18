@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
 
 namespace MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieCommands
 {
@@ -15,6 +16,6 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieComm
         public int Duration { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string CreatedYear { get; set; }
-        public bool Status { get; set; }
+        public string Status { get; set; }
     }
 }

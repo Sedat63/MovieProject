@@ -36,7 +36,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StichAI", "StichAI", "{1584
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClaudeAI", "ClaudeAI", "{5E911710-4146-4935-B0AE-B23BACC476B4}"
 	ProjectSection(SolutionItems) = preProject
+		AdminMovieListView.txt = AdminMovieListView.txt
 		ClaudeAIPrompt.txt = ClaudeAIPrompt.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChatGPT", "ChatGPT", "{916A8F8B-DF00-4B82-9C83-471185C10B1D}"
+	ProjectSection(SolutionItems) = preProject
+		AdminCaegoryListView.txt = AdminCaegoryListView.txt
+		AdminCreateCategoryView.txt = AdminCreateCategoryView.txt
+		CreateMovieAdminView.txt = CreateMovieAdminView.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MoviesAndSeries", "MoviesAndSeries", "{5E818FBB-B927-4899-9714-E5BFAD5BF764}"
+	ProjectSection(SolutionItems) = preProject
+		MovieList.txt = MovieList.txt
+		SeriesList.txt = SeriesList.txt
 	EndProjectSection
 EndProject
 Global
@@ -82,6 +96,8 @@ Global
 		{833EF86F-C478-4810-9E03-2DDE1ABD9575} = {FBA692D6-E3B3-438C-824E-40B356D96B3A}
 		{15848D16-0BE9-4214-AD63-6452253D69D7} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
 		{5E911710-4146-4935-B0AE-B23BACC476B4} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
+		{916A8F8B-DF00-4B82-9C83-471185C10B1D} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
+		{5E818FBB-B927-4899-9714-E5BFAD5BF764} = {C402AEF3-B85E-4B13-882F-826EE9EBA9FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30FB10F3-FAAA-4728-9606-2BD059C7F3E2}

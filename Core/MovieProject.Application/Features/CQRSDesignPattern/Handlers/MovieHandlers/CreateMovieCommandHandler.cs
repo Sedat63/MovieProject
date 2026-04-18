@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieCommands;
+using MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
 using MovieProject.Domain.Entities;
 using MovieProject.Persistance.Context;
 
