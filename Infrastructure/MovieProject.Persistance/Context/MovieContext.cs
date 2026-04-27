@@ -12,6 +12,17 @@ namespace MovieProject.Persistance.Context
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;initial catalog=MovieProjectDb;integrated security=true;TrustServerCertificate=true");
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Review>()
+                .HasOne<AppUser>()          // Navigation yok!
+                .WithMany()
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Review> Reviews { get; set; }

@@ -17,5 +17,6 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Commands.MovieComm
         public DateTime ReleaseDate { get; set; }
         public string CreatedYear { get; set; }
         public string Status { get; set; }
+        public int CategoryId { get; set; }
     }
 }

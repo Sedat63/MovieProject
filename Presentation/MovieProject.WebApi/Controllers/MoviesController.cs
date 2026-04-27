@@ -15,14 +15,16 @@ namespace MovieProject.WebApi.Controllers
         private readonly CreateMovieCommandHandler _createMovieCommandHandler;
         private readonly UpdateMovieCommandHandler _updateMovieCommandHandler;
         private readonly RemoveMovieCommandHandler _removeMovieCommandHandler;
+        private readonly GetMovieWithCategoryQueryHandler _getMovieWithCategoryQueryHandler;
 
-        public MoviesController(GetMovieQueryHandler getMovieQueryHandler, GetMovieByIdQueryHandler getMovieByIdQueryHandler, CreateMovieCommandHandler createMovieCommandHandler, UpdateMovieCommandHandler updateMovieCommandHandler, RemoveMovieCommandHandler removeMovieCommandHandler)
+        public MoviesController(GetMovieQueryHandler getMovieQueryHandler, GetMovieByIdQueryHandler getMovieByIdQueryHandler, CreateMovieCommandHandler createMovieCommandHandler, UpdateMovieCommandHandler updateMovieCommandHandler, RemoveMovieCommandHandler removeMovieCommandHandler, GetMovieWithCategoryQueryHandler getMovieWithCategoryQueryHandler)
         {
             _getMovieQueryHandler = getMovieQueryHandler;
             _getMovieByIdQueryHandler = getMovieByIdQueryHandler;
             _createMovieCommandHandler = createMovieCommandHandler;
             _updateMovieCommandHandler = updateMovieCommandHandler;
             _removeMovieCommandHandler = removeMovieCommandHandler;
+            _getMovieWithCategoryQueryHandler = getMovieWithCategoryQueryHandler;
         }
 
         [HttpGet]
@@ -57,6 +59,14 @@ namespace MovieProject.WebApi.Controllers
         public async Task<IActionResult> GetMovieById(int id)
         {
             var value = await _getMovieByIdQueryHandler.Handle(new GetMovieByIdQuery(id));
+            return Ok(value);
+        }
+
+
+        [HttpGet("GetMovieWithCategory")]
+        public async Task<IActionResult> GetMovieWithCategory()
+        {
+            var value = await _getMovieWithCategoryQueryHandler.Handle();
             return Ok(value);
         }
     }

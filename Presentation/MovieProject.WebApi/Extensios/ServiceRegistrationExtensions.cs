@@ -22,6 +22,7 @@ namespace MovieProject.WebApi.Extensios
             services.AddScoped<CreateMovieCommandHandler>();
             services.AddScoped<RemoveMovieCommandHandler>();
             services.AddScoped<UpdateMovieCommandHandler>();
+            services.AddScoped<GetMovieWithCategoryQueryHandler>();
 
             //Series
             services.AddScoped<GetSeriesQueryHandler>();
@@ -29,6 +30,7 @@ namespace MovieProject.WebApi.Extensios
             services.AddScoped<CreateSeriesCommandHandler>();
             services.AddScoped<RemoveSeriesCommandHandler>();
             services.AddScoped<UpdateSeriesCommandHandler>();
+            services.AddScoped<GetSeriesWithCategoryQueryHandler>();
 
             //user
             services.AddScoped<CreateUserRegisterCommandHandler>();

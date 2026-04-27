@@ -1,5 +1,7 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using MovieProject.Dto.Dtos.AdminCategoryDtos;
 using MovieProject.Dto.Dtos.AdminMovieDtos;
 using Newtonsoft.Json;
 
@@ -21,7 +23,7 @@ namespace MovieProject.WebUI.Areas.Admin.Controllers
         {
             var client = _httpClientFactory.CreateClient();
 
-            var responseMessage = await client.GetAsync($"{_apiBaseUrl}/api/Movies");
+            var responseMessage = await client.GetAsync($"{_apiBaseUrl}/api/Movies/GetMovieWithCategory");
 
 
             if (responseMessage.IsSuccessStatusCode)
@@ -34,8 +36,18 @@ namespace MovieProject.WebUI.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult CreateMovie()
+        public async Task<IActionResult> CreateMovie()
         {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"{_apiBaseUrl}/api/Categories");
+
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var categories = JsonConvert.DeserializeObject<List<AdminResultCategoryDto>>(jsonData);
+                ViewBag.Categories = new SelectList(categories, "CategoryId", "CategoryName");
+            }
+
             return View();
         }
 
@@ -58,23 +70,3 @@ namespace MovieProject.WebUI.Areas.Admin.Controllers
     }
 }
 
-/*
- 
-        [HttpPost]
-        public async Task<IActionResult> CreateCategory(AdminCreateCategoryDto adminCreateCategoryDto)
-        {
-            var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(adminCreateCategoryDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
-            var responseMessage = await client.PostAsync("https://localhost:7221/api/Categories", stringContent);
-
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("CategoryList");
-            }
-
-            return View();
-        }
- 
- */

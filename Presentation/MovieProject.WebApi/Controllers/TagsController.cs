@@ -19,7 +19,7 @@ namespace MovieProject.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetList()
+        public async Task<IActionResult> TagList()
         {
             var value = await _mediator.Send(new GetTagQuery());
             return Ok(value);

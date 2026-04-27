@@ -38,6 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClaudeAI", "ClaudeAI", "{5E
 	ProjectSection(SolutionItems) = preProject
 		AdminMovieListView.txt = AdminMovieListView.txt
 		ClaudeAIPrompt.txt = ClaudeAIPrompt.txt
+		CreateMovieCategoriesDropdown.txt = CreateMovieCategoriesDropdown.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChatGPT", "ChatGPT", "{916A8F8B-DF00-4B82-9C83-471185C10B1D}"

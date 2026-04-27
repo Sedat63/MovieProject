@@ -22,5 +22,15 @@ namespace MovieProject.WebApi.Controllers
             await _createUserRegisterCommandHandler.Handle(createUserRegisterCommand);
             return Ok("Kullanıcı Başarıyla Eklendi");
         }
+
+        [HttpPost("bulk")]
+        public async Task<IActionResult> CreateUserRegisterBulk(List<CreateUserRegisterCommand> commands)
+        {
+            foreach (var command in commands)
+            {
+                await _createUserRegisterCommandHandler.Handle(command);
+            }
+            return Ok($"{commands.Count} Kullanıcı Başarıyla Eklendi");
+        }
     }
 }

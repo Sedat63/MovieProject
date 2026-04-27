@@ -80,9 +80,7 @@ VALUES
 ('Rocky', '/images/rocky.jpg', 8.1,
 'Þansý yaver giden amatör bir boksörün, dünya þampiyonuna karþý ringe çýkma fýrsatý yakalamasýyla baþlayan ilham verici hikaye.',
 120, '1976-12-03', 1976, 'Active', 21);
-
-
-------------------------------------------------------------------
+---------------------------------------------------------------------
 
 INSERT INTO Movies
 (Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)

@@ -31,6 +31,7 @@ namespace MovieProject.Application.Features.CQRSDesignPattern.Handlers.MovieHand
                 ReleaseDate = createMovieCommand.ReleaseDate,
                 Status = createMovieCommand.Status,
                 Title = createMovieCommand.Title,
+                CategoryId = createMovieCommand.CategoryId,
             });
 
             await _context.SaveChangesAsync();

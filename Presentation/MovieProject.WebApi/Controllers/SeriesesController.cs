@@ -17,14 +17,16 @@ namespace MovieProject.WebApi.Controllers
         private readonly CreateSeriesCommandHandler _createSeriesCommandHandler;
         private readonly UpdateSeriesCommandHandler _updateSeriesCommandHandler;
         private readonly RemoveSeriesCommandHandler _removeSeriesCommandHandler;
+        private readonly GetSeriesWithCategoryQueryHandler _getSeriesWithCategoryQueryHandler;
 
-        public SeriesesController(GetSeriesQueryHandler getSeriesQueryHandler, GetSeriesByIdQueryHandler getSeriesByIdQueryHandler, CreateSeriesCommandHandler createSeriesCommandHandler, UpdateSeriesCommandHandler updateSeriesCommandHandler, RemoveSeriesCommandHandler removeSeriesCommandHandler)
+        public SeriesesController(GetSeriesQueryHandler getSeriesQueryHandler, GetSeriesByIdQueryHandler getSeriesByIdQueryHandler, CreateSeriesCommandHandler createSeriesCommandHandler, UpdateSeriesCommandHandler updateSeriesCommandHandler, RemoveSeriesCommandHandler removeSeriesCommandHandler, GetSeriesWithCategoryQueryHandler getSeriesWithCategoryQueryHandler)
         {
             _getSeriesQueryHandler = getSeriesQueryHandler;
             _getSeriesByIdQueryHandler = getSeriesByIdQueryHandler;
             _createSeriesCommandHandler = createSeriesCommandHandler;
             _updateSeriesCommandHandler = updateSeriesCommandHandler;
             _removeSeriesCommandHandler = removeSeriesCommandHandler;
+            _getSeriesWithCategoryQueryHandler = getSeriesWithCategoryQueryHandler;
         }
 
         [HttpGet]
@@ -59,9 +61,16 @@ namespace MovieProject.WebApi.Controllers
         [HttpGet("GetSeriesById")]
         public async Task<IActionResult> GeteriesById(int id)
         {
-            var value= await _getSeriesByIdQueryHandler.Handle(new GetSeriesByIdQuery(id));
+            var value = await _getSeriesByIdQueryHandler.Handle(new GetSeriesByIdQuery(id));
             return Ok(value);
         }
-     
+
+        [HttpGet("GetSeriesWithCategory")]
+        public async Task<IActionResult> GetSeriesWithCategory()
+        {
+            var values = await _getSeriesWithCategoryQueryHandler.Handle();
+            return Ok(values);
+        }
+
     }
 }

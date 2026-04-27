@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using MovieProject.Application.Features.MediatorDesignPattern.Handlers.TagHandlers;
 using MovieProject.Application.Features.MediatorDesignPattern.Queries.TagQueries;
 using MovieProject.Application.Features.MediatorDesignPattern.Results.TagResults;
 using MovieProject.Persistance.Context;
